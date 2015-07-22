@@ -1517,7 +1517,7 @@ vertices = (
 # f4 = tuple(f3)
 
 def cube():
-	glBegin(GL_LINE_STRIP)
+	glBegin(GL_POINTS)
 
 	# for i in f4:
 	# 	d = "("+i+")"
@@ -1538,7 +1538,7 @@ def main():
 	pygame.init()
 	display = (800, 600)
 	pygame.display.set_mode(display, DOUBLEBUF | OPENGL)
-	gluPerspective(150, (display[0]/display[1]), 1, 60.0)  # field of view in y-axis, aspect ratio, viewer to near
+	gluPerspective(300, (display[0]/display[1]), 5, 500.0)  # field of view in y-axis, aspect ratio, viewer to near
 	# clipping angle and far clipping angle
 	glTranslatef(0.0, 0.0, -50)  # translate against x-axis, y-axis and z-axis
 	glRotatef(0, 0, 0, 0)
