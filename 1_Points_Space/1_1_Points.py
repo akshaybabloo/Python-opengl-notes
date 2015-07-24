@@ -10,27 +10,11 @@ data = open('mapping.txt', 'r')
 vertices = tuple(tuple(int(j) for j in i.split()) for i in data.readlines())
 
 
-# f = open('mapping.txt','r')
-#
-# f1 = f.readlines()
-# f2 = [w.replace('\n', '') for w in f1]
-# f3 = [w.replace('\t', ',') for w in f2]
-# f4 = tuple(f3)
-
 def cube():
 	glBegin(GL_POINTS)
 
-	# for i in f4:
-	# 	d = "("+i+")"
-	# 	# glVertex3fv(d)
-	# 	print(d)
-
 	for vertex in vertices:
 		glVertex3fv(vertex)
-
-	# for edge in edges:
-	# 	for vertex in edge:
-	# 		glVertex3fv(vertices[vertex])
 
 	glEnd()
 
