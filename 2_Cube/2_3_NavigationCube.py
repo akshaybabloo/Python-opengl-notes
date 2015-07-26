@@ -96,6 +96,12 @@ def main():
 				# if event.key == pygame.K_LEFT:
 				# 	glTranslatef(-1, 0, 0)
 
+			if event.type == pygame.MOUSEBUTTONDOWN:
+				if event.button == 4:
+					glTranslatef(0, 0, 1.0)
+				if event.button == 5:
+					glTranslatef(0, 0, -1.0)
+
 		# glRotatef(1, 6, 9, 0)   # angel, x-axis, y-axis and z-axis
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
 		cube()
